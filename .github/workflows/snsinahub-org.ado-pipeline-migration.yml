@@ -12,9 +12,7 @@ jobs:
   Build-Build:
     name: Build
     runs-on:
-      - self-hosted
-      - x86
-      - my-hosted-runner
+      - ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@v2
@@ -23,9 +21,7 @@ jobs:
   Build-print_default_working_directory:
     name: print_dir_path
     runs-on:
-      - self-hosted
-      - x86
-      - my-hosted-runner
+      - ubuntu-latest
     steps:
     - name: checkout
       uses: actions/checkout@v2
@@ -39,9 +35,7 @@ jobs:
     - Build-Build
     - Build-print_default_working_directory
     runs-on:
-      - self-hosted
-      - x86
-      - my-hosted-runner
+      - ubuntu-latest
     environment:
       name: sandbox
     
@@ -60,9 +54,7 @@ jobs:
     needs:
     - Deploy_sandbox-Deploy_sandbox
     runs-on:
-      - self-hosted
-      - x86
-      - my-hosted-runner
+      - ubuntu-latest
     environment:
       name: prod
     
