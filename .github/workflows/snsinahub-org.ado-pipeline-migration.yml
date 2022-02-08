@@ -44,8 +44,7 @@ jobs:
       - my-hosted-runner
     environment:
       name: sandbox
-    env:
-      url: www.snsina.com
+    
     if: github.RUN_NUMBER == 1
     steps:
     - name: checkout
@@ -66,8 +65,7 @@ jobs:
       - my-hosted-runner
     environment:
       name: prod
-    env:
-      url: snsina.github.io
+    
     if: github.RUN_NUMBER == 1
     steps:
     - name: checkout
