@@ -1,0 +1,20 @@
+name: Sample/Sample-CI-import
+on:
+  workflow_dispatch:
+env:
+  system_debug: 'false'
+jobs:
+  Phase_1:
+    name: Agent job 1
+    runs-on:
+      - self-hosted
+      - Default
+    steps:
+    - uses: actions/checkout@v2
+#     # This item has no matching transformer
+#     - task: NodeJsExec@0
+#       displayName: NodeJS Inline Script
+#       inputs:
+#         script: 'console.log(''Starting'')
+#
+#           '
